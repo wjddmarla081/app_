@@ -1,8 +1,10 @@
-package com.example.dice_project;
+package com.example.calcul_project;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,12 +12,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.util.Random;
-
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView imageView1;
-    private ImageView imageView2;
+    public EditText num1;
+    public EditText num2;
+    public Button but1;
+    public Button but2;
+    public Button but3;
+    public Button but4;
+    public TextView result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,77 +33,28 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        imageView1 = findViewById(R.id.imageView3);
-        imageView2 = findViewById(R.id.imageView4);
+        num1 = (EditText) findViewById(R.id.editTextNumber);
+        num2 = (EditText) findViewById(R.id.editTextNumber2);
+        but1 = (Button) findViewById(R.id.button5);
+        but2 = (Button) findViewById(R.id.button6);
+        but3 = (Button) findViewById(R.id.button7);
+        but4 = (Button) findViewById(R.id.button8);
+        result = (TextView) findViewById(R.id.textView2);
+
     }
 
-    public void randomDice(View view) {
+    public void plus(View view) {
+        int answer = num1 + num2;
+        result.setText(answer);
 
-        Random random = new Random();
-        int randomnumber1 = random.nextInt(5);
-        int randomnumber2 = random.nextInt(5);
+    }
 
-        if (randomnumber1 == 0){
-            imageView1 = findViewById(R.id.imageView3);
-            imageView1.setImageResource(R.drawable.one);
-        }
+    public void subtraction(View view) {
+    }
 
-        if (randomnumber1 == 1){
-            imageView1 = findViewById(R.id.imageView3);
-            imageView1.setImageResource(R.drawable.two);
-        }
+    public void multipli(View view) {
+    }
 
-        if (randomnumber1 == 2){
-            imageView1 = findViewById(R.id.imageView3);
-            imageView1.setImageResource(R.drawable.three);
-        }
-
-        if (randomnumber1 == 3){
-            imageView1 = findViewById(R.id.imageView3);
-            imageView1.setImageResource(R.drawable.four);
-        }
-
-        if (randomnumber1 == 4){
-            imageView1 = findViewById(R.id.imageView3);
-            imageView1.setImageResource(R.drawable.five);
-        }
-
-        if (randomnumber1 == 5){
-            imageView1 = findViewById(R.id.imageView3);
-            imageView1.setImageResource(R.drawable.six);
-        }
-
-        if (randomnumber2 == 0){
-            imageView2 = findViewById(R.id.imageView4);
-            imageView2.setImageResource(R.drawable.one);
-        }
-
-        if (randomnumber2 == 1){
-            imageView2 = findViewById(R.id.imageView4);
-            imageView2.setImageResource(R.drawable.two);
-        }
-
-        if (randomnumber2 == 2){
-            imageView2 = findViewById(R.id.imageView4);
-            imageView2.setImageResource(R.drawable.three);
-        }
-
-        if (randomnumber2 == 3){
-            imageView2 = findViewById(R.id.imageView4);
-            imageView2.setImageResource(R.drawable.four);
-        }
-
-        if (randomnumber2 == 4){
-            imageView2 = findViewById(R.id.imageView4);
-            imageView2.setImageResource(R.drawable.five);
-        }
-
-        if (randomnumber2 == 5){
-            imageView2 = findViewById(R.id.imageView4);
-            imageView2.setImageResource(R.drawable.six);
-        }
-        //textViewRandomNumber.setText("난수: " + randomnumber);
-
-
+    public void division(View view) {
     }
 }

@@ -8,51 +8,83 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="2dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="410dp"
+        android:layout_height="83dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="82dp">
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
-            android:onClick = "randomDice"/>
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="숫자1 입력"/>
 
+        <EditText
+            android:id="@+id/editTextNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="숫자2 입력"/>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="418dp"
-        android:layout_height="238dp"
-        android:layout_marginBottom="386dp"
+        android:layout_width="413dp"
+        android:layout_height="72dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="165dp">
 
-        <ImageView
-            android:id="@+id/imageView3"
+        <Button
+            android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:text="덧셈"
+            android:onClick="plus"/>
 
-        <ImageView
-            android:id="@+id/imageView4"
+        <Button
+            android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:text="뺄셈"
+            android:onClick="subtraction"/>
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="곱셈"
+            android:onClick="multipli"/>
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="나눗셈"
+            android:onClick="division"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="192dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="237dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="계산된 값: " />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
