@@ -1,4 +1,4 @@
-package com.example.calcul_project;
+package com.example.calcul;
 
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public Button but4;
     public TextView result;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,17 +45,39 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void plus(View view) {
-        int answer = num1 + num2;
-        result.setText(answer);
+
+        int number1 = Integer.parseInt(num1.getText().toString());
+        int number2 = Integer.parseInt(num2.getText().toString());
+
+        int answer = (number1 + number2);
+        result.setText(String.valueOf(answer));
 
     }
 
     public void subtraction(View view) {
+        int number1 = Integer.parseInt(num1.getText().toString());
+        int number2 = Integer.parseInt(num2.getText().toString());
+
+        int answer = (number1 - number2);
+        result.setText(String.valueOf(answer));
+
     }
 
     public void multipli(View view) {
+
+        int number1 = Integer.parseInt(num1.getText().toString());
+        int number2 = Integer.parseInt(num2.getText().toString());
+
+        int answer = (number1 * number2);
+        result.setText(String.valueOf(answer));
     }
 
     public void division(View view) {
+
+        int number1 = Integer.parseInt(num1.getText().toString());
+        int number2 = Integer.parseInt(num2.getText().toString());
+
+        int answer = (number1 / number2);
+        result.setText(String.valueOf(answer));
     }
 }
